@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Carrera Extrema — Elio Gabancho</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game-container">
+
+  <canvas id="gameCanvas" width="400" height="640"></canvas>
+
+  <!-- Portada / Cover -->
+  <div id="screen-cover" class="screen">
+    <div class="stripe-top"></div>
+    <h1 class="title">CARRERA<br>EXTREMA</h1>
+    <p class="subtitle">Esquiva. Acelera. Gana.</p>
+
+    <div class="author-card">
+      <span class="author-label">Elaborado por</span>
+      <span class="author-name">Elio Jose Gabancho Catunta</span>
+    </div>
+
+    <div class="instructions">
+      <p><span class="key">◀ ▶</span> o <span class="key">A</span> <span class="key">D</span> — mover el auto</p>
+      <p>Esquiva los autos rivales y los barriles</p>
+      <p>Acumula <strong id="points-target-cover">10</strong> puntos para subir de nivel</p>
+    </div>
+
+    <button id="btn-start" class="btn btn-primary">JUGAR ▶</button>
+    <div class="stripe-bottom"></div>
+  </div>
+
+  <!-- HUD -->
+  <div id="hud" class="hidden">
+    <div class="hud-row">
+      <div class="hud-chip">NIVEL <span id="hud-level">1</span></div>
+      <div class="hud-chip">PTS <span id="hud-points">0</span>/<span id="hud-points-max">10</span></div>
+      <div class="hud-chip">SCORE <span id="hud-score">0</span></div>
+    </div>
+    <div class="hud-row hud-row-bottom">
+      <div class="hud-lives" id="hud-lives">
+        <span class="life-icon">🚗</span><span class="life-icon">🚗</span><span class="life-icon">🚗</span>
+      </div>
+      <button id="btn-mute" class="btn-icon" aria-label="Silenciar">🔊</button>
+    </div>
+  </div>
+
+  <!-- Transición de nivel -->
+  <div id="screen-level-transition" class="screen overlay-screen hidden">
+    <h2 class="level-msg">¡NIVEL 2!</h2>
+    <p class="level-sub">La velocidad aumenta y aparecen nuevos rivales…</p>
+  </div>
+
+  <!-- Game Over -->
+  <div id="screen-gameover" class="screen overlay-screen hidden">
+    <h1 class="gameover-title">VUELVE A<br>INTENTARLO</h1>
+    <p id="gameover-score" class="final-score"></p>
+    <button id="btn-retry" class="btn btn-primary">REINTENTAR ↻</button>
+  </div>
+
+  <!-- Victoria -->
+  <div id="screen-win" class="screen overlay-screen hidden">
+    <h1 class="win-title">¡GANASTE!</h1>
+    <p id="win-score" class="final-score"></p>
+    <p class="author-name small">Elio Jose Gabancho Catunta</p>
+    <button id="btn-playagain" class="btn btn-primary">JUGAR DE NUEVO ↻</button>
+  </div>
+
+  <!-- Controles táctiles -->
+  <div id="touch-controls" class="hidden">
+    <button id="btn-left" class="touch-btn">◀</button>
+    <button id="btn-right" class="touch-btn">▶</button>
+  </div>
+
+</div>
+<script src="game.js"></script>
+</body>
+</html>
