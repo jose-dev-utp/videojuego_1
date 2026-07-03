@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🏁 Carrera Extrema
 
 Juego de carros top-down hecho en **HTML5 + CSS + JavaScript puro (sin librerías)**, desarrollado como examen del curso.
@@ -86,3 +87,6 @@ python3 -m http.server 8000
 - **Video demostrativo:** graba tu pantalla (o celular) mostrando: portada con tu nombre → nivel 1 → subida a nivel 2 → una partida ganada y una perdida, con el sonido activado.
 - **Archivo base editable:** entrega esta misma carpeta (`index.html` + `style.css` + `game.js`), o el enlace al repositorio de GitHub.
 - **URL pública:** el link de GitHub Pages / Netlify / Vercel / itch.io una vez publicado.
+=======
+# videojuego_1
+>>>>>>> 5c63d8463093585a40b55441b7e8b021b3485a3a
